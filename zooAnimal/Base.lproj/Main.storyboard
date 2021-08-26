@@ -65,21 +65,74 @@
             </objects>
             <point key="canvasLocation" x="1957.9710144927537" y="27.455357142857142"/>
         </scene>
-        <!--Subtitle Cell-->
+        <!--Custom Cell-->
         <scene sceneID="W6e-Ga-PJC">
             <objects>
                 <viewController id="tFF-O7-wp1" customClass="CustomCellViewController" customModule="zooAnimal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NoO-HW-xMK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZYO-rJ-s9g">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="animalCell" rowHeight="165" id="67a-K7-Bqv" customClass="AnimalCell" customModule="zooAnimal" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="165"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="67a-K7-Bqv" id="Feu-uO-kbH" customClass="AnimalCell" customModule="zooAnimal" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="165"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uxr-Jv-s2L">
+                                                    <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Animal name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SwJ-M7-YDC">
+                                                    <rect key="frame" x="148" y="8" width="258" height="17"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Classification" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ied-Ky-dnp">
+                                                    <rect key="frame" x="148" y="33" width="258" height="14.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OdM-ZX-h4f">
+                                                    <rect key="frame" x="148" y="125" width="238" height="14.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="animalClassificationLabel" destination="Ied-Ky-dnp" id="ZlG-LV-IUi"/>
+                                            <outlet property="animalImageView" destination="uxr-Jv-s2L" id="qRd-Pr-k1S"/>
+                                            <outlet property="animalNameLabel" destination="SwJ-M7-YDC" id="7Ph-kr-vAp"/>
+                                            <outlet property="animalOriginLabel" destination="OdM-ZX-h4f" id="uM0-Wj-SCr"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="f6g-hu-OWm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Subtitle Cell" id="6DO-tL-vfT"/>
+                    <navigationItem key="navigationItem" title="Custom Cell" id="6DO-tL-vfT"/>
+                    <connections>
+                        <outlet property="tableView" destination="ZYO-rJ-s9g" id="Iwj-Qn-iJZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4NM-tc-wML" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1958" y="724"/>
+            <point key="canvasLocation" x="1957.9710144927537" y="723.88392857142856"/>
         </scene>
         <!--Sections Cell-->
         <scene sceneID="BbR-pU-4wB">
@@ -97,11 +150,11 @@
             </objects>
             <point key="canvasLocation" x="1958" y="1456"/>
         </scene>
-        <!--Item-->
+        <!--Basic Cell-->
         <scene sceneID="Wxt-d6-cgn">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0BG-ik-GPg" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="6F1-8B-e2h"/>
+                    <tabBarItem key="tabBarItem" title="Basic Cell" image="1.circle" catalog="system" id="6F1-8B-e2h"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="XCv-vR-bfL">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -122,6 +175,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ju9-t9-NGp" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1h0-SE-HHO">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -135,11 +189,11 @@
             </objects>
             <point key="canvasLocation" x="-213" y="724"/>
         </scene>
-        <!--Item-->
+        <!--Custom Cell-->
         <scene sceneID="Lfp-Jr-LhE">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QVz-tv-N5v" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="xPh-hv-vsC"/>
+                    <tabBarItem key="tabBarItem" title="Custom Cell" image="2.circle" catalog="system" id="xPh-hv-vsC"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2PJ-5p-aWc">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -154,11 +208,11 @@
             </objects>
             <point key="canvasLocation" x="1048" y="724"/>
         </scene>
-        <!--Item-->
+        <!--Sections Cell-->
         <scene sceneID="274-qh-ZqV">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Com-P5-IFk" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="SR9-t0-CMO"/>
+                    <tabBarItem key="tabBarItem" title="Sections Cell" image="3.circle" catalog="system" id="SR9-t0-CMO"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="SCG-7p-DNi">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -175,6 +229,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="1.circle" catalog="system" width="128" height="121"/>
+        <image name="2.circle" catalog="system" width="128" height="121"/>
+        <image name="3.circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
